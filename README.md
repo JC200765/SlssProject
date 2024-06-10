@@ -8,4 +8,12 @@
 
 ### Features
 ### known Bugs
+- # Score board doesn't work
 ### Attribution
+
+
+
+
+# Game inspired by War Thunder and Space Inturders
+# Author of Game: Justin 
+# Date: 6/6/2024
