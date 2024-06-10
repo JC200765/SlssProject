@@ -14,6 +14,8 @@ GRAY = (128, 128, 128)
 
 WIDTH = 340
 HEIGHT = 500
+WIDTH = 340
+HEIGHT = 500
 SCREEN_SIZE = (WIDTH, HEIGHT)
 
 MISSILE = pg.image.load("./Images/missile.svg")
@@ -45,6 +47,7 @@ class Player(pg.sprite.Sprite):
         # Keep it at the bottom of the screen
         if self.rect.top < HEIGHT - 200:
             self.rect.top = HEIGHT - 200
+
 
 
 
@@ -136,6 +139,15 @@ def start():
 
 
 
+    text_font = pg.font.SysFont("Arial", 30)
+
+    def draw_text(text,font, text_col, x,y):
+        img = font.render(text, True, text_col)
+        screen.blit(img,(x,y))
+
+
+
+
     # Background of game
     sky = pg.image.load("./Images/cloud.jpeg")
     sky = pg.transform.scale(sky, SCREEN_SIZE)
@@ -163,10 +175,13 @@ def start():
     pg.display.set_caption("Shoot 'Em Up")
 
     score =0
+
+    score =0
   # Set the last time an enemy spawned
     last_time_spawned = pg.time.get_ticks()
     # --Main Loop--
     while not done:
+
 
         # --- Event Listener
         for event in pg.event.get():
@@ -195,6 +210,7 @@ def start():
             enemies_hit = pg.sprite.spritecollide(bullet, enemy_sprites, False)
 
             score = len(enemies_hit)
+            score = len(enemies_hit)
             for enemy in enemies_hit:
                 enemy.kill()
                 bullet.kill()
@@ -203,6 +219,7 @@ def start():
         screen.blit(sky, (0, 0))
 
         all_sprites.draw(screen)
+        draw_text("Score:"+str(score), text_font, (0,0,0), 0, 0)
         draw_text("Score:"+str(score), text_font, (0,0,0), 0, 0)
 
         # Update the screen with anything new
@@ -220,3 +237,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
