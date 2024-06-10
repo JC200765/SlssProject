@@ -21,7 +21,7 @@ MISSILE = pg.transform.scale(MISSILE, (MISSILE.get_width() // 100, MISSILE.get_h
 MISSILE = pg.transform.rotate(MISSILE, -90)
 
 NUM_ENEMIES = 1
-TIME_OF_ENEMY_SPAWN = 3
+
 
 
 # TODO: Player class
@@ -163,8 +163,7 @@ def start():
     pg.display.set_caption("Shoot 'Em Up")
 
     score =0
-  # Set the last time an enemy spawned
-    last_time_spawned = pg.time.get_ticks()
+
     # --Main Loop--
     while not done:
 
@@ -179,17 +178,7 @@ def start():
 
         # --- Update the world state
         all_sprites.update()
-        # If the time as elapsed for enemy spawned, spawn a new enemy
-        # Get the time right now
-        now = pg.time.get_ticks()
 
-           # now 4000 milliseconds    # last_time 1000 milliseconds
-        if now - last_time_spawned >= TIME_OF_ENEMY_SPAWN * 1000:
-            enemy = Enemy(random.randrange(20, WIDTH - 20), random.randrange(20, HEIGHT - 400))
-
-            all_sprites.add(enemy)
-            enemy_sprites.add(enemy)
-            last_time_spawned = now
         # Collision between bullets and enemies
         for bullet in bullet_sprites:
             enemies_hit = pg.sprite.spritecollide(bullet, enemy_sprites, False)
