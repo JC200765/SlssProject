@@ -14,6 +14,6 @@
 
 
 
-# Game inspired by War Thunder and Space Inturders
+# Game inspired by War Thunder and Space Invaders
 # Author of Game: Justin 
 # Date: 6/6/2024
