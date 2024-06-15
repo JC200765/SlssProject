@@ -175,8 +175,6 @@ def start():
     pg.display.set_caption("Shoot 'Em Up")
 
     score =0
-
-    score =0
   # Set the last time an enemy spawned
     last_time_spawned = pg.time.get_ticks()
     # --Main Loop--
@@ -209,8 +207,7 @@ def start():
         for bullet in bullet_sprites:
             enemies_hit = pg.sprite.spritecollide(bullet, enemy_sprites, False)
 
-            score = len(enemies_hit)
-            score = len(enemies_hit)
+            score += len(enemies_hit)
             for enemy in enemies_hit:
                 enemy.kill()
                 bullet.kill()
@@ -237,4 +234,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
