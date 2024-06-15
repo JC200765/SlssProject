@@ -7,9 +7,8 @@
 # Run python main.py to start the game.
 
 ### Features
-### known Bugs
-- # Score board doesn't work
-### Attribution
+- # Score board to count enemies hit
+- # New enemies spawning every 3 seconds
 
 
 
