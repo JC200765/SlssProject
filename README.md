@@ -4,7 +4,7 @@
 # The final pygame project for SLSS Programming.
 
 # Instructions to Run
-# Run python main.py to start the game.
+- # Run python main.py to start the game.
 
 ### Features
 - # Score board to count enemies hit
